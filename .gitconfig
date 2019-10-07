@@ -1,0 +1,22 @@
+[user]
+	email = user@world.com
+	name = User
+[color]
+	branch = auto
+	ui = auto
+[rerere]
+	enabled = true
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	cmd = "code --wait --diff $LOCAL $REMOTE"
+[merge]
+	tool = vscode
+[mergetool "vscode"]
+	cmd = "code --wait $MERGED"
+[core]
+	autocrlf = false
+	eol = lf
+	editor = "vim"
+
+
