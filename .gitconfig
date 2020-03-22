@@ -18,5 +18,3 @@
 	autocrlf = false
 	eol = lf
 	editor = "vim"
-
-
