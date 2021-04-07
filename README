@@ -1,0 +1,40 @@
+# Dotfiles
+
+A rudimentary system to port my dotfiles & settings over to a new machine.
+
+## Install tmux and tpm
+
+```
+sudo apt-get install tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+## Install fish and fisher
+
+Steps to install depend on the OS & flavour. [Installation steps](https://fishshell.com#platform_tabs)
+
+```
+# install fisher
+curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+
+# set fish as default shell (assuming bash)
+chsh -s `which fish`
+```
+
+## Port settings
+
+Clone this repo
+
+```
+git clone https://github.com/kumarharsh/dotfiles ~/dotfiles
+```
+
+Copy over the settings
+
+```
+cd dotfiles
+cp -r .config ~/.config
+cp .gitconfig .vimrc .tmux.conf ~/
+```
+
+If there are any errors, it's most probably caused by variables in fish config. Go over the `~/.config/fish/fish_variables` and other files to verify that all the vars are correct. (TODO: fix this)
